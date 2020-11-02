@@ -35,7 +35,7 @@ const app = express();
 app.use('/task', bodyParser.json());
 app.use('/task', router);
 
-app.get('/', (request, response) => response.send('Cluster Network Master'));
+app.get('/', (request, response) => response.send('Dobby did not mean to kill'));
 
 // redirect
 app.get('*', (request, response) => response.redirect('/'));
