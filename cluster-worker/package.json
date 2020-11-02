@@ -1,0 +1,14 @@
+{
+  "name": "cluster-worker",
+  "version": "1.0.0",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js --port 9001 --password \\\"abcdefg\\\""
+  },
+  "author": "jguyet",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "socket.io": "^2.3.0"
+  }
+}
