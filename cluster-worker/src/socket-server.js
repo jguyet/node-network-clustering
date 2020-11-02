@@ -11,7 +11,7 @@ function initSocketServer(port, password) {
 
         socket.on('request', (request) => {// hook requests
             if(request.password === password) {
-                console.log(`${utility.getTime()} : ${'Job Start '.padEnd(13)}${request.code}`);
+                console.log(`${utility.getTime()} : ${'Job Start '.padEnd(13)}${request.id}`);
 
                 // lock instance
                 socket.emit('response', { 'command': 'job', 'state': 'invalid' });
