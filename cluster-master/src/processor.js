@@ -47,7 +47,7 @@ const processQueue = async () => {
             let currentMessage = currentJob[1];
             let currentResponse = currentJob[2];
             data.pendingTaskQueue.shift();
-            data.workingTaskData[currentCode] = [currentMessage, currentResponse];
+            data.workingTaskData[currentJobId] = [currentMessage, currentResponse];
 
             while (true) {
                 if (done) break;
@@ -63,7 +63,7 @@ const processQueue = async () => {
                         break;
                     }
                 }
-                await sleep(10); // if all workers work
+                await sleep(5); // if all workers work
             }
         }
         if (data.pendingTaskQueue.length === 0) await sleep(10); // if queue is empty

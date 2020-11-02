@@ -17,7 +17,7 @@ function initSocketServer(port, password) {
                 socket.emit('response', { 'command': 'job', 'state': 'invalid' });
 
                 // working
-                socket.emit('response', { 'command': 'result', 'id': request.id, 'result': `${JSON.stringify(request.src).toString()}` });
+                socket.emit('response', { 'command': 'result', 'id': request.id, 'result': `${JSON.stringify(request.message).toString()}` });
 
                 // unlock instance
                 socket.emit('response', { 'command': 'job', 'state': 'valid' });
